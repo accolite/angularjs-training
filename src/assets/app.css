@@ -11,3 +11,17 @@
 	float: left;
 	padding: 20px;
 }
+
+.book-detail{
+	padding : 20px;
+}
+
+.book-attribute{
+	padding: 20px;
+}
+
+.book-issue-button{
+	position: relative;
+    top:50%; 
+    left:50%;
+}
