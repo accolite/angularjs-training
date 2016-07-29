@@ -9,13 +9,23 @@
 
     function config($stateProvider, $urlRouterProvider) {
 
-        $urlRouterProvider.otherwise('/books');
+        $urlRouterProvider.otherwise('/books/list');
 
     	$stateProvider
         .state('books', {
+            abstract: true,
     		url: '/books',
-    		templateUrl: 'src/app/books/books.html',
-            controller: 'booksCtrl',
-    	});
+            template : "<div ui-view></div>",
+            resolve:{
+
+            }
+    	})
+        .state('books.list', {
+            url: '/list',
+            templateUrl: 'src/app/books/books.html',
+        })
+        .state('books.detail', {
+            url: '/detail/:id'
+        });
     }
 })();
