@@ -1,0 +1,23 @@
+Accolite Library
+---------------------
+
+Books
+	Add a book
+	List of books
+	View book details
+		book details directive
+
+	Edit book
+	Category of books
+My Books
+	Books issued to me.
+	
+Search books
+	search by category
+	search by name
+
+Books by 
+
+Issue a book
+Return a book
+Locate a book - who has it?

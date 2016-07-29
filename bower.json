@@ -1,0 +1,26 @@
+{
+  "name": "angularjs-training",
+  "authors": [
+    "Ashutosh Upadhyay <ashutosh.upadhyay@gmail.com)"
+  ],
+  "description": "Sample library app for angularjs training",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "jquery": "^3.1.0",
+    "bootstrap": "^3.3.6",
+    "angular-ui-router": "^0.3.1"
+  },
+  "resolutions": {
+    "jquery": "1.9.1 - 2"
+  }
+}

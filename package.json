@@ -1,0 +1,10 @@
+{
+  "name": "angularjs-training",
+  "description": "Sample library app for angualrjs training",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-eslint": "^19.0.0"
+  }
+}
