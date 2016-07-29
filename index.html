@@ -24,7 +24,7 @@
         <a class="navbar-brand" href="#">Accolite Library</a>
       </div>
       <ul class="nav navbar-nav">
-        <li ng-class="{'active' : activeState == 0 }"><a ui-sref="books">Books</a></li>
+        <li ng-class="{'active' : activeState == 0 }"><a ui-sref="books.list">Books</a></li>
         <li ng-class="{'active' : activeState == 1 }"><a ui-sref="users">Users</a></li>
       </ul>
     </div>
@@ -52,7 +52,8 @@
   <script src="src/app/books/books.module.js"></script>
   <script src="src/app/books/books.service.js"></script>
   <script src="src/app/books/books.controller.js"></script>
-  <script src="src/app/books/book-details.directive.js"></script>
+  <script src="src/app/books/book-tile.directive.js"></script>
+
 
   <script src="src/app/app.module.js"></script>
   <script src="src/app/app.controller.js"></script>

@@ -9,14 +9,25 @@
 
     function config($stateProvider, $urlRouterProvider) {
 
-        $urlRouterProvider.otherwise('/books');
+        $urlRouterProvider.otherwise('/books/list');
 
-        $stateProvider
-            .state('books', {
-                url: '/books',
-                templateUrl: 'src/app/books/books.html',
-                controller: 'booksCtrl',
-            }).state('users', {
+    	$stateProvider
+        .state('books', {
+            abstract: true,
+    		url: '/books',
+            template : "<div ui-view></div>",
+            resolve:{
+
+            }
+    	})
+        .state('books.list', {
+            url: '/list',
+            templateUrl: 'src/app/books/books.html',
+        })
+        .state('books.detail', {
+            url: '/detail/:id'
+        })
+        .state('users', {
                 url: '/users',
                 templateUrl: 'src/app/users/users.html',
                 controller: 'usersController',
@@ -27,7 +38,7 @@
                          return user;
                     }]
                 }
-            });
+        });
     }
 
 })();

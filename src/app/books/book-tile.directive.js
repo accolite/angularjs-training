@@ -10,7 +10,7 @@
 		return {
 			restrict: "EA",
 			scope: {},
-			templateUrl: "books-details.directive/html",
+			templateUrl: "src/app/books/book-tile.directive.html",
 			link: function(scope, elem, attr){
 
 			}
