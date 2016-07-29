@@ -1,4 +1,4 @@
-<div ng-class="{'panel-primary panel  book-tile' : category === 'Technical', 'panel-success panel  book-tile' : category === 'Fiction'}">
+<div ng-class="{'panel-danger panel  book-tile' : quantity === 0, 'panel-success panel  book-tile' : quantity !== 0 }">
   <div class="panel-heading">
     <h3 class="panel-title"><a ui-sref="books.detail({id: bookId})">{{name}}</a></h3>
   </div>

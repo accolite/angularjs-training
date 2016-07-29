@@ -13,7 +13,11 @@
         
         this.getBookDetails = function () {
             booksBorrowed.forEach(function (book) {
-                this.booksBorrowed.push(Books.getBookById(book.bookId));
+                var bookDetail = Books.getBookById(book.bookId);
+                this.booksBorrowed.push({
+                    'name' : bookDetail.name,
+                    'dueDate' : Date.now() + parseInt(book.dueDate)
+                });
             }.bind(this));
         }
 
