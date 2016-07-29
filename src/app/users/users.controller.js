@@ -46,7 +46,7 @@
                     templateUrl: 'src/app/users/user.details.html',
                     controller: 'userDetailsController',
                     controllerAs: 'userDetails',
-                    size: 'sm',
+                    size: 'lg',
                     resolve: {
                         booksBorrowed: ["userService", function (userService) {
                             return userService.getBooksForUser(row.entity.userName);
