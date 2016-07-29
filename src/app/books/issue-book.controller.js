@@ -19,7 +19,8 @@
 		  };
 
 		  $scope.ok = function () {
-		    $uibModalInstance.close($scope.selectedUser.email, book.id);
+				userService.issueBooksForUser($scope.selectedUser.email,book.id);
+		    $uibModalInstance.close();
 		  };
 
 		  $scope.cancel = function () {
