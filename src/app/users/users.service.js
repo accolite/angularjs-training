@@ -8,10 +8,13 @@
     userService.$inject = ["$http"];
 
     function userService($http) {
+        
         this.userList;
+        
         this.fetchUsers = function () {
             var that =this;
             var promise = $http.get("/src/data/users.json");
+            
             promise.then(function (response) {
                 if (response) {
                     that.userList = response.data.users;
