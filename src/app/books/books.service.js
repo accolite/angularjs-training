@@ -33,7 +33,12 @@
 		};
 
 		this.getBookById = function(id){
-			return this.books[0];
+			var index = _.findIndex(this.books, function(book) { return book.id == id; });
+			return this.books[index];
+		};
+
+		this.issueBook = function(id){
+
 		};
 
 		this.addBook = function(name, author, publisher, language, category){
