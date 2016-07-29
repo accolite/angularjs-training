@@ -23,7 +23,8 @@
                 controllerAs: 'users',
                 resolve: {
                     userList: ["userService", function (userService) {
-                        return userService.fetchUsers();
+                         var user = userService.fetchUsers();
+                         return user;
                     }]
                 }
             });

@@ -11,12 +11,13 @@
         this.userList;
         this.fetchUsers = function () {
             var that =this;
-            $http.get("/src/data/users.json").then(function (response) {
+            var promise = $http.get("/src/data/users.json");
+            promise.then(function (response) {
                 if (response) {
                     that.userList = response.data.users;
-                    return that.userList;
                 }
             });
+            return promise;
         }
 
         this.getUserList = function(){
