@@ -22,7 +22,7 @@
 	  </div>
 
 	   <div class="panel-footer">
-	   		 <button class="btn btn-danger book-issue-button" type="button" ng-click="openBookIssueModal(book.id)">
+	   		 <button class="btn btn-danger book-issue-button" type="button" ng-click="openBookIssueModal(book.id)" ng-disabled="book.quantity === 0">
 	   		 	Issue
 	   		 </button>
 	   </div>
