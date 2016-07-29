@@ -1,5 +1,3 @@
-<div class="user-table">
-<li ng-repeat="user in users.userList">
-    <span>{{user.name}}</span>
-</li>
+<div class="user-list-container">
+<div ui-grid="users.gridOptions" class="users-grid"></div>
 </div>

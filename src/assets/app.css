@@ -3,6 +3,10 @@
 	height: 175px;
 }
 
+.users-grid{
+	width : 80%;
+	margin-left : 10%;
+}
 .book-list{
 	padding: 20px;
 }

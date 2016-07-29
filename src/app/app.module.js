@@ -1,11 +1,12 @@
-(function() {
+(function () {
     'use strict';
 
     angular
-        .module('library', [ 
-        	"ui.router",
-        	"ui.bootstrap",
-        	"books",
+        .module('library', [
+            "ui.router",
+            "ui.grid",
+            "ui.bootstrap",
+            "books",
             "users"
         ]);
 })();
