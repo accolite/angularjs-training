@@ -7,23 +7,11 @@
 
     usersController.$inject = ["$scope", "userService", "userListResponse", "$uibModal"];
     function usersController($scope, userService, userListResponse, $uibModal) {
+
         this.userList = undefined;
 
-        this.getGridData = function () {
-            var gridData = [];
-            this.userList.forEach(function (user) {
-                var clonedObj = _.clone(user);
-                delete clonedObj.booksBorrowed;
-                gridData.push(clonedObj);
-            });
-            return gridData;
-        }
-
         this.initializeUserData = function () {
-            if (userListResponse && userListResponse.data && userListResponse.data.users) {
-                this.userList = userListResponse.data.users;
-                this.gridData = this.getGridData();
-            }
+            this.userList = userService.getUserList();
         }
 
         this.initializeGridOptions = function () {
@@ -44,7 +32,7 @@
                         cellTemplate: "<button class='btn btn-default' style='margin-left:25%;margin-top:5px;' ng-click='grid.appScope.openBooksModal(row)'>Books Borrowed</button>"
                     }
                 ],
-                data: this.gridData,
+                data: this.userList,
                 rowHeight: 40,
                 appScopeProvider: this
             };
@@ -69,6 +57,7 @@
         }
         this.initializeUserData();
         this.initializeGridOptions();
+
     }
 
 })();
