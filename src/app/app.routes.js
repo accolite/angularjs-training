@@ -17,15 +17,20 @@
     		url: '/books',
             template : "<div ui-view></div>",
             resolve:{
-
+                bookList: ["Books", function(Books){
+                    return Books.loadAllBooks();
+                }]
             }
     	})
         .state('books.list', {
             url: '/list',
             templateUrl: 'src/app/books/books.html',
+            controller: 'booksCtrl'
         })
         .state('books.detail', {
-            url: '/detail/:id'
+            url: '/detail/:id',
+            templateUrl: 'src/app/books/book-detail.html',
+            controller: 'bookDetailCtrl'
         })
         .state('users', {
                 url: '/users',

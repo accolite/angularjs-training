@@ -9,7 +9,13 @@
 	function BookDetailsDirective(){
 		return {
 			restrict: "EA",
-			scope: {},
+			scope: {
+				name: "=",
+				author: "=",
+				publisher: "=", 
+				bookId: "@",
+				category: "@"
+			},
 			templateUrl: "src/app/books/book-tile.directive.html",
 			link: function(scope, elem, attr){
 

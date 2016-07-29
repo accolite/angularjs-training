@@ -1,4 +1,13 @@
 .book-tile{
-	width: 220px;
+	width: 260px;
 	height: 175px;
+}
+
+.book-list{
+	padding: 20px;
+}
+
+.book-list-item{
+	float: left;
+	padding: 20px;
 }
