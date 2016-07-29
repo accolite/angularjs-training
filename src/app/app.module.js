@@ -4,6 +4,7 @@
     angular
         .module('library', [ 
         	"ui.router",
-        	"books"
+        	"books",
+                "users"
         ]);
 })();

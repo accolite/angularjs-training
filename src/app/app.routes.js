@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
 
     angular
@@ -26,6 +26,18 @@
         })
         .state('books.detail', {
             url: '/detail/:id'
+        })
+        .state('users', {
+                url: '/users',
+                templateUrl: 'src/app/users/users.html',
+                controller: 'usersController',
+                controllerAs: 'users',
+                resolve: {
+                    userList: ["userService", function (userService) {
+                        return userService.fetchUsers();
+                    }]
+                }
         });
     }
+
 })();
