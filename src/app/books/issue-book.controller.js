@@ -19,8 +19,10 @@
 		  };
 
 		  $scope.ok = function () {
-				userService.issueBooksForUser($scope.selectedUser.email,book.id);
-		    $uibModalInstance.close();
+			$uibModalInstance.close(
+				{'email': $scope.selectedUser.email,
+				'bookId': book.id }
+				);
 		  };
 
 		  $scope.cancel = function () {

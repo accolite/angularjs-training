@@ -28,6 +28,10 @@
 
 		};
 
+		this.bookIssued = function(bookId){
+			this.inventory[bookId]--;
+		};
+
 		this.getQuantities = function(){
 			return this.inventory;
 		};
