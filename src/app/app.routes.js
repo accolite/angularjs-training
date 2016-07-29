@@ -33,7 +33,7 @@
                 controller: 'usersController',
                 controllerAs: 'users',
                 resolve: {
-                    userList: ["userService", function (userService) {
+                    userListResponse: ["userService", function (userService) {
                          var user = userService.fetchUsers();
                          return user;
                     }]

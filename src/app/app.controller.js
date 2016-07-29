@@ -12,7 +12,7 @@
         $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
            if(toState && toState.name === "users"){
                $scope.activeState = 1;
-           }else if(toState.name === "books"){
+           }else if(toState.name && toState.name.indexOf("books") > -1){
                $scope.activeState = 0;
            }
         });
