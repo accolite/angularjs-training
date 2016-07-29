@@ -30,9 +30,11 @@
 
 		    modalInstance.result.then(function (issueObj) {
 		    		//issue a book
-		    		userService.issueBooksForUser(issueObj.email, issueObj.bookId);
+		    		var success = userService.issueBooksForUser(issueObj.email, issueObj.bookId);
 		    		
-		    		Inventory.bookIssued(issueObj.bookId);
+		    		if(success){
+		    			Inventory.bookIssued(issueObj.bookId);
+		    		}	
 
 		    		$state.go('books.list');	    			    		
 		    		
