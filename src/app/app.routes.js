@@ -19,6 +19,9 @@
             resolve:{
                 bookList: ["Books", function(Books){
                     return Books.loadAllBooks();
+                }],
+                inventoryDetail: ["Inventory", function(Inventory){
+                    return Inventory.loadInventory();   
                 }]
             }
     	})
