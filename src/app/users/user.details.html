@@ -2,7 +2,14 @@
     <h3 class="modal-title">Books Borrowed</h3>
 </div>
 <div class="modal-body">
-<div ui-grid = "{data : userDetails.booksBorrowed}">
+    <ul>
+        <li ng-repeat="book in userDetails.booksBorrowed">
+           Book id :  {{book.bookId}}
+           Book name :  {{book.name}}
+           Author :  {{book.author}}
+           Due date : {{book.dueDate | date : 'mediumDate'}}
+        </li>
+    </ul>
 </div>
 <div class="modal-footer">
     <button class="btn btn-warning" type="button" ng-click="userDetails.close()">Close</button>
