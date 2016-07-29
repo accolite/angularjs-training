@@ -55,6 +55,9 @@
         }
 
         this.issueBooksForUser = function (email, bookId) {
+
+            var success = false;
+
             this.userList.forEach(function (user) {
                 if (user.email === email) {
                     if (!this.isBookAlreadyIssued(bookId, user)) {
@@ -63,11 +66,15 @@
                             "dueDate":  Date.now() + (15 * 24 * 60 * 60 * 1000)
                         });
 
+                        success = true;
                     }else{
                         alert("Book already issued");
+                        success = false;
                     }
                 }
             }.bind(this));
+
+            return success;
         }
     }
 })();
