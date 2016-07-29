@@ -16,7 +16,7 @@
                 var bookDetail = Books.getBookById(book.bookId);
                 this.booksBorrowed.push({
                     'name' : bookDetail.name,
-                    'dueDate' : Date.now() + parseInt(book.dueDate)
+                    'dueDate' : book.dueDate
                 });
             }.bind(this));
         }
