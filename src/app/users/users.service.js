@@ -14,6 +14,7 @@
             $http.get("/src/data/users.json").then(function (response) {
                 if (response) {
                     that.userList = response.data.users;
+                    return that.userList;
                 }
             });
         }

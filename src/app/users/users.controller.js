@@ -5,10 +5,9 @@
         .module("users")
         .controller("usersController", usersController);
 
-    usersController.$inject = ["userService"];
-    function usersController(userService) {
-        this.userList = userService.getUserList();
-
+    usersController.$inject = ["userService","userList"];
+    function usersController(userService,userList) {
+        this.userList = userList;
     }
 
 })();

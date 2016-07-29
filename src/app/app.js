@@ -5,9 +5,8 @@
         .module('library')
         .run(run);
 
-    run.$inject = ["userService"];
+    run.$inject = [];
 
-    function run(userService) {
-        userService.fetchUsers();
+    function run() {
     }
 })();

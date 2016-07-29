@@ -3,11 +3,18 @@
 
     angular
         .module('library')
-        .controller(appController);
+        .controller("appController", appController);
 
-    appController.$inject = [];
+    appController.$inject = ["$scope", "$rootScope"];
 
-    function appController() {
-       this.activeState = 0; 
+    function appController($scope, $rootScope) {
+
+        $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+           if(toState && toState.name === "users"){
+               $scope.activeState = 1;
+           }else if(toState.name === "books"){
+               $scope.activeState = 0;
+           }
+        });
     }
 })();

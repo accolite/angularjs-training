@@ -2,5 +2,9 @@
     'use strict';
 
     angular
-        .module('library', ["users","ui.router"]);
+        .module('library', [ 
+        	"ui.router",
+        	"books",
+                "users"
+        ]);
 })();
