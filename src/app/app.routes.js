@@ -5,12 +5,17 @@
         .module('library')
         .config(config);
 
-    config.$inject = ['$stateProvider'];
+    config.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-    function config($stateProvider) {
-    	$stateProvider.state('books', {
-    		url: 'library/books',
-    		templateUrl: 'src/app/books/books.html'
+    function config($stateProvider, $urlRouterProvider) {
+
+        $urlRouterProvider.otherwise('/books');
+
+    	$stateProvider
+        .state('books', {
+    		url: '/books',
+    		templateUrl: 'src/app/books/books.html',
+            controller: 'booksCtrl',
     	});
     }
 })();
