@@ -1,0 +1,56 @@
+{
+    "users": [
+        {
+            "userName": "lak",
+            "name": "Lakshmi Narayanan",
+            "email": "laknaren16@gmail.com",
+            "booksBorrowed": [
+                {
+                    "bookId": 1,
+                    "dueDate": "25/08/2016"
+                }
+            ]
+        },
+        {
+            "userName": "subhajee",
+            "name": "Subhajeet Sarkar",
+            "email": "subhajeet@gmail.com",
+            "booksBorrowed": [
+                {
+                    "bookId": 2,
+                    "dueDate": "28/08/2016"
+                },
+                {
+                    "bookId": 1,
+                    "dueDate": "28/08/2016"
+                }
+            ]
+        },
+        {
+            "userName": "pushpak",
+            "name": "Pushpak",
+            "email": "push@gmail.com",
+            "booksBorrowed": [
+                {
+                    "bookId": 3,
+                    "dueDate": "29/08/2016"
+                }
+            ]
+        },
+        {
+            "userName": "abc",
+            "name": "Abc Def",
+            "email": "abc@gmail.com",
+            "booksBorrowed": [
+                {
+                    "bookId": 3,
+                    "dueDate": "29/08/2016"
+                },
+                {
+                    "bookId": 2,
+                    "dueDate": "26/08/2016"
+                }
+            ]
+        }
+    ]
+}
