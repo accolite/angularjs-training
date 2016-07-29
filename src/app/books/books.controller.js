@@ -5,10 +5,10 @@
 	angular.module('books')
 	.controller("booksCtrl", BooksCtrl);
 
-	BooksCtrl.$inject = ["$scope"];
+	BooksCtrl.$inject = ["$scope", "Books"];
 
-	function BooksCtrl($scope){
-		
+	function BooksCtrl($scope, Books){
+		$scope.books = Books.getAllBooksWithQuantity();
 	}
 
 

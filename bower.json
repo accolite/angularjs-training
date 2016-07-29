@@ -19,7 +19,11 @@
     "jquery": "^3.1.0",
     "bootstrap": "^3.3.6",
     "angular-ui-router": "^0.3.1",
+<<<<<<< HEAD
     "lodash": "~4.14.1"
+=======
+    "angular-bootstrap": "~2.0.0"
+>>>>>>> 5a313f15443ce48a5deee2d7243f3147a287d8ce
   },
   "resolutions": {
     "jquery": "1.9.1 - 2"

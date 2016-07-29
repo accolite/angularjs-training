@@ -1,9 +1,31 @@
 .book-tile{
-	width: 220px;
+	width: 260px;
 	height: 175px;
 }
 
 .users-grid{
 	width : 80%;
 	margin-left : 10%;
+}
+.book-list{
+	padding: 20px;
+}
+
+.book-list-item{
+	float: left;
+	padding: 20px;
+}
+
+.book-detail{
+	padding : 20px;
+}
+
+.book-attribute{
+	padding: 20px;
+}
+
+.book-issue-button{
+	position: relative;
+    top:50%; 
+    left:50%;
 }

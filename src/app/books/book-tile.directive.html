@@ -1,8 +1,13 @@
-<div class="panel panel-success book-tile">
+<div ng-class="{'panel-primary panel  book-tile' : category === 'Technical', 'panel-success panel  book-tile' : category === 'Fiction'}">
   <div class="panel-heading">
-    <h3 class="panel-title">Panel title</h3>
+    <h3 class="panel-title"><a ui-sref="books.detail({id: bookId})">{{name}}</a></h3>
   </div>
   <div class="panel-body">
-    Panel content
+  	<div>
+  		<b>Author: </b> {{author}}
+  	</div>
+  	<div>
+  		<b>Left: </b> {{quantity}}
+  	</div>
   </div>
 </div>

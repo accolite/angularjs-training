@@ -1,0 +1,30 @@
+<div class="book-detail">
+	<div class="panel panel-default">
+	  <div class="panel-heading " >
+	    <h3 class="panel-title book-detail-center">{{book.name}}</h3>
+	  </div>
+	  <div class="panel-body book-detail-position">
+		    <div class="book-attribute">
+	  			<b>Author: </b> {{book.author}}
+		  	</div>
+		    <div class="book-attribute">
+	  			<b>Publisher: </b> {{book.publisher}}
+		  	</div>
+		  	<div class="book-attribute">
+	  			<b>Language: </b> {{book.language}}
+		  	</div>
+		  	<div class="book-attribute"> 
+	  			<b>Category: </b> {{book.category}}
+		  	</div>
+		  	<div class="book-attribute">
+	  			<b>Pages: </b> {{book.pages}}
+		  	</div>
+	  </div>
+
+	   <div class="panel-footer">
+	   		 <button class="btn btn-danger book-issue-button" type="button" ng-click="openBookIssueModal(book.id)">
+	   		 	Issue
+	   		 </button>
+	   </div>
+	</div>
+</div>
