@@ -1,6 +1,6 @@
 <div class="book-list">
 	<div ng-repeat="book in books" class="book-list-item">
-		<book-details name="book.name" author="book.author" publisher="book.publisher" book-id="{{book.id}}"
+		<book-details name="book.name" book-id="{{book.id}}" quantity="book.quantity" author="{{book.author}}"
 		category="{{book.category}}"></book-details>
 	<div>
 <div>

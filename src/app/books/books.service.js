@@ -5,9 +5,9 @@
 	angular.module("books")
 		.service("Books", Books);
 
-	Books.$inject = ['$http'];
+	Books.$inject = ['$http', "Inventory"];
 
-	function Books($http){
+	function Books($http, Inventory){
 		
 		//to be populated eagerly
 		this.books = undefined;
@@ -29,6 +29,13 @@
 		};
 
 		this.getAllBooksWithQuantity = function(){
+
+			var inventory = Inventory.getQuantities();
+
+			_.forEach(this.books, function(book){
+				book.quantity = inventory[book.id];
+			});
+
 			return this.books;
 		};
 

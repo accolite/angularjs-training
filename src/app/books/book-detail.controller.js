@@ -5,9 +5,9 @@
 	angular.module('books')
 	.controller("bookDetailCtrl", BooksDetailCtrl);
 
-	BooksDetailCtrl.$inject = ["$scope", "Books", "$stateParams", "$uibModal", "userService"];
+	BooksDetailCtrl.$inject = ["$scope", "Books", "$stateParams", "$uibModal", "userService", "Inventory"];
 
-	function BooksDetailCtrl($scope, Books, $stateParams, $uibModal, userService){
+	function BooksDetailCtrl($scope, Books, $stateParams, $uibModal, userService, Inventory){
 
 		$scope.book = Books.getBookById($stateParams.id);
 
@@ -28,8 +28,10 @@
 											      }
 											    });
 
-		    modalInstance.result.then(function (email, bookId) {
+		    modalInstance.result.then(function (issueObj) {
 		    		//issue a book
+		    		userService.issueBooksForUser(issueObj.email, issueObj.bookId);
+		    		Inventory.bookIssued(issueObj.bookId);
 		    		
 			    }, function () {
 			      console.log('Modal dismissed at: ' + new Date());
