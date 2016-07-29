@@ -29,3 +29,9 @@
     top:50%; 
     left:50%;
 }
+
+.borrowed-book-tile{
+	width : 200px;
+	height: 100px;
+	background: #ccc;
+}
