@@ -8,7 +8,9 @@
     userService.$inject = ["$http"];
 
     function userService($http) {
+
         this.userList = undefined;
+
         this.fetchUsers = function () {
             
             if(!_.isUndefined(this.userList)){
@@ -16,6 +18,7 @@
             }
             
             var promise = $http.get("/src/data/users.json");
+            
             promise.then(function (response) {
                 if (response) {
                     this.userList = response.data.users;
