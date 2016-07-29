@@ -31,7 +31,7 @@
 		    modalInstance.result.then(function (issueObj) {
 		    		//issue a book
 		    		userService.issueBooksForUser(issueObj.email, issueObj.bookId);
-		    		Inventory.bookIssued(bookId);
+		    		Inventory.bookIssued(issueObj.bookId);
 		    		
 			    }, function () {
 			      console.log('Modal dismissed at: ' + new Date());
