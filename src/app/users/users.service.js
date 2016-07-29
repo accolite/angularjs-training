@@ -60,7 +60,7 @@
                     if (!this.isBookAlreadyIssued(bookId, user)) {
                         user.booksBorrowed.push({
                             "bookId": bookId,
-                            "dueDate":  Date.now() + (15 * 24 * 60 * 60)
+                            "dueDate":  Date.now() + (15 * 24 * 60 * 60 * 1000)
                         });
 
                     }else{
