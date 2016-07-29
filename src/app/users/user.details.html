@@ -4,8 +4,8 @@
 <div class="modal-body">
     <ul>
         <li ng-repeat="book in userDetails.booksBorrowed">
-           Book name :  {{book.name}}
-           Due date : {{book.dueDate | date : 'mediumDate'}}
+           <b>Book name : </b>  {{book.name}}<br/>
+           <b>Due date : </b> {{book.dueDate | date : 'mediumDate'}}
         </li>
     </ul>
 </div>

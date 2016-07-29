@@ -8,7 +8,9 @@
     userDetailsController.$inject = ["$uibModalInstance", "booksBorrowed", "Books"];
 
     function userDetailsController($uibModalInstance, booksBorrowed, Books) {
+        
         this.booksBorrowed = [];
+        
         this.getBookDetails = function () {
             booksBorrowed.forEach(function (book) {
                 this.booksBorrowed.push(Books.getBookById(book.bookId));

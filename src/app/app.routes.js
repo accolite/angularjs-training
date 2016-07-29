@@ -32,7 +32,7 @@
             })
             .state('books.detail', {
                 url: '/detail/:id',
-                templateUrl: 'src/app/books/book-detail.html',
+                templateUrl: 'src/app/books/book.detail.html',
                 controller: 'bookDetailCtrl'
             })
             .state('users', {
